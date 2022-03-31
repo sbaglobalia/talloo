@@ -2,7 +2,7 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 export default function CustomButton(props) {
-  const {buttonText, handleClick, selected, buttonStyle} = this.props;
+  const {buttonText, handleClick, selected, buttonStyle} = props;
 
   return (
     <TouchableOpacity
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderColor: '#DD0000',
     marginTop: 20,
-    //borderWidth: 1
     justifyContent: 'center',
     alignContent: 'center',
     alignSelf: 'center',

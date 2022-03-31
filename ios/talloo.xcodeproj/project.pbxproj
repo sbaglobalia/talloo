@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* tallooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tallooTests.m */; };
+		082CAF3C70607507A73FABB1 /* libPods-talloo-tallooTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802B09B2F77DA77CFED65F /* libPods-talloo-tallooTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1D44C74EA0FA7FD5B2719738 /* libPods-talloo-tallooTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA1140139CF3CB780C7020 /* libPods-talloo-tallooTests.a */; };
-		5C16FDAD7C16A0B7E13E31CC /* libPods-talloo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F965F4268D2D1EF968D8C1 /* libPods-talloo.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F927BCA216527FD104F0B283 /* libPods-talloo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3FAD8DE52676A600CA842C /* libPods-talloo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,8 @@
 		00E356EE1AD99517003FC87E /* tallooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tallooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* tallooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tallooTests.m; sourceTree = "<group>"; };
+		110CB665EDF1875D028BB452 /* Pods-talloo-tallooTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo-tallooTests.release.xcconfig"; path = "Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests.release.xcconfig"; sourceTree = "<group>"; };
+		129838DBB8DDDB6BF93B5306 /* Pods-talloo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo.release.xcconfig"; path = "Target Support Files/Pods-talloo/Pods-talloo.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* talloo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talloo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = talloo/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = talloo/AppDelegate.m; sourceTree = "<group>"; };
@@ -39,27 +41,25 @@
 		185B21A7D43243A6B7E37CF4 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		1C5B176B48854D8EB96AED4D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		233F49EB2C1F4B35B76A73EF /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		23F965F4268D2D1EF968D8C1 /* libPods-talloo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-talloo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA058EE400B484694E2BEAA /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		2C802B09B2F77DA77CFED65F /* libPods-talloo-tallooTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-talloo-tallooTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3DD7D055FC481987B2DD35 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		4C3FAD8DE52676A600CA842C /* libPods-talloo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-talloo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3D00CCF4B949CB812BB535 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		50473E0A30314B5D9578B4C8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		5BF833D997A64FB6BEBFBC7B /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		69E1E29B9EC049F1B90A9D8D /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		6F8EC4E98D6C44548B2CC835 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = talloo/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8FAA1140139CF3CB780C7020 /* libPods-talloo-tallooTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-talloo-tallooTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9067CE69384F860FBBE52F50 /* Pods-talloo-tallooTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo-tallooTests.release.xcconfig"; path = "Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D54D49A59D04B63B3CB3798 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		9D6EE338C4E64C7B9E1B0586 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		A244968C6EDF4F86BBC55758 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		A3321F374928164A46EEE595 /* Pods-talloo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo.release.xcconfig"; path = "Target Support Files/Pods-talloo/Pods-talloo.release.xcconfig"; sourceTree = "<group>"; };
 		C30F1A31B1644716AEB26FC9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		C6CD63CC40C74FE19251EF10 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		CC18E1DE4D0E4E1F83AD8DAD /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		D2B1A1FAFD7EBCCA23E5FC1E /* Pods-talloo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo.debug.xcconfig"; path = "Target Support Files/Pods-talloo/Pods-talloo.debug.xcconfig"; sourceTree = "<group>"; };
-		E90A2DBE5C6D32F15982727C /* Pods-talloo-tallooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo-tallooTests.debug.xcconfig"; path = "Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1364A5399F021C3BF56365 /* Pods-talloo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo.debug.xcconfig"; path = "Target Support Files/Pods-talloo/Pods-talloo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F9AE0B7A41657AB4FA8E0CAB /* Pods-talloo-tallooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-talloo-tallooTests.debug.xcconfig"; path = "Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D44C74EA0FA7FD5B2719738 /* libPods-talloo-tallooTests.a in Frameworks */,
+				082CAF3C70607507A73FABB1 /* libPods-talloo-tallooTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C16FDAD7C16A0B7E13E31CC /* libPods-talloo.a in Frameworks */,
+				F927BCA216527FD104F0B283 /* libPods-talloo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,10 +115,10 @@
 		2CF23B62FD4A83B557C9CB0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D2B1A1FAFD7EBCCA23E5FC1E /* Pods-talloo.debug.xcconfig */,
-				A3321F374928164A46EEE595 /* Pods-talloo.release.xcconfig */,
-				E90A2DBE5C6D32F15982727C /* Pods-talloo-tallooTests.debug.xcconfig */,
-				9067CE69384F860FBBE52F50 /* Pods-talloo-tallooTests.release.xcconfig */,
+				DE1364A5399F021C3BF56365 /* Pods-talloo.debug.xcconfig */,
+				129838DBB8DDDB6BF93B5306 /* Pods-talloo.release.xcconfig */,
+				F9AE0B7A41657AB4FA8E0CAB /* Pods-talloo-tallooTests.debug.xcconfig */,
+				110CB665EDF1875D028BB452 /* Pods-talloo-tallooTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				23F965F4268D2D1EF968D8C1 /* libPods-talloo.a */,
-				8FAA1140139CF3CB780C7020 /* libPods-talloo-tallooTests.a */,
+				4C3FAD8DE52676A600CA842C /* libPods-talloo.a */,
+				2C802B09B2F77DA77CFED65F /* libPods-talloo-tallooTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tallooTests" */;
 			buildPhases = (
-				7DD1E14C7C051591085BB774 /* [CP] Check Pods Manifest.lock */,
+				BD03670B388F82B37B3D49DD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				2ED4C4270CBBBBBC0E97E2A3 /* [CP] Embed Pods Frameworks */,
-				0BFFD3549B471EF0C79F81D0 /* [CP] Copy Pods Resources */,
+				ECE761206CB92A21705F76DE /* [CP] Embed Pods Frameworks */,
+				D3DFD221395D7668604638F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,14 +216,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "talloo" */;
 			buildPhases = (
-				5D7DA279439E5D6703067CBB /* [CP] Check Pods Manifest.lock */,
+				E927549DF1AA86F06D3730B3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				EBD1BD136F079F2A826450A4 /* [CP] Embed Pods Frameworks */,
-				B6907690A10DD516C90FACAD /* [CP] Copy Pods Resources */,
+				9D5D27EA137B9D983C7EA203 /* [CP] Embed Pods Frameworks */,
+				38E07DEB4E75B150D2CF0277 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,63 +304,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0BFFD3549B471EF0C79F81D0 /* [CP] Copy Pods Resources */ = {
+		38E07DEB4E75B150D2CF0277 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2ED4C4270CBBBBBC0E97E2A3 /* [CP] Embed Pods Frameworks */ = {
+		9D5D27EA137B9D983C7EA203 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D7DA279439E5D6703067CBB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-talloo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7DD1E14C7C051591085BB774 /* [CP] Check Pods Manifest.lock */ = {
+		BD03670B388F82B37B3D49DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,38 +360,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B6907690A10DD516C90FACAD /* [CP] Copy Pods Resources */ = {
+		D3DFD221395D7668604638F4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EBD1BD136F079F2A826450A4 /* [CP] Embed Pods Frameworks */ = {
+		E927549DF1AA86F06D3730B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-talloo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo/Pods-talloo-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE761206CB92A21705F76DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-talloo-tallooTests/Pods-talloo-tallooTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -468,7 +468,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E90A2DBE5C6D32F15982727C /* Pods-talloo-tallooTests.debug.xcconfig */;
+			baseConfigurationReference = F9AE0B7A41657AB4FA8E0CAB /* Pods-talloo-tallooTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -495,7 +495,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9067CE69384F860FBBE52F50 /* Pods-talloo-tallooTests.release.xcconfig */;
+			baseConfigurationReference = 110CB665EDF1875D028BB452 /* Pods-talloo-tallooTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -519,7 +519,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2B1A1FAFD7EBCCA23E5FC1E /* Pods-talloo.debug.xcconfig */;
+			baseConfigurationReference = DE1364A5399F021C3BF56365 /* Pods-talloo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -535,7 +535,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talloo;
 				PRODUCT_NAME = talloo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -545,7 +545,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3321F374928164A46EEE595 /* Pods-talloo.release.xcconfig */;
+			baseConfigurationReference = 129838DBB8DDDB6BF93B5306 /* Pods-talloo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -560,7 +560,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talloo;
 				PRODUCT_NAME = talloo;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -49,12 +49,8 @@ const SignIn = ({navigation}) => {
             <View style={styles.buttonViewContainer}>
               <TouchableOpacity
                 onPress={() => navigation.navigate('Login')}
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Ionicons name="email" size={20} color="gray" style={{}} />
+                style={styles.emailTouchable}>
+                <Ionicons name="email" size={20} color="gray" />
                 {/* marginLeft: 20 */}
                 <Text style={styles.buttonText}>Continue with Email</Text>
               </TouchableOpacity>
@@ -64,16 +60,12 @@ const SignIn = ({navigation}) => {
 
             <View style={styles.buttonViewContainer}>
               <TouchableOpacity
-                // onPress={() => this._signIn()}
+                // onPress={() => _signIn()}
                 onPress={_singInWithGoogle}
-                style={{
-                  flexDirection: 'row',
-                  // alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
+                style={styles.googleSignIn}>
                 <Image
                   source={EVENT_CATEGORY_CONSTANT.GOOGLE}
-                  style={{height: '100%', width: '7%'}}
+                  style={styles.googleImage}
                   resizeMode="contain"
                 />
                 <Text style={styles.buttonText}>Continue with Google</Text>
@@ -83,28 +75,13 @@ const SignIn = ({navigation}) => {
               <View>
                 <Text style={styles.orTitleText}>or</Text>
                 <View
-                  style={[
-                    styles.buttonViewContainer,
-                    {
-                      backgroundColor: 'black',
-                      // borderColor: 'red',
-                      // borderWidth: 2,
-                      // justifyContent: 'center',
-                      // width:'100%',
-                      height: hp('6%'),
-                    },
-                  ]}>
+                  style={[styles.buttonViewContainer, styles.appleButtonView]}>
                   <TouchableOpacity
-                    // onPress={() => this._singInWithApple()}
+                    // onPress={() => _singInWithApple()}
                     onPress={() => _singInWithApple()}
-                    style={{
-                      flexDirection: 'row',
-                      // alignItems: 'center',
-                      justifyContent: 'center',
-                    }}>
+                    style={styles.appleButtonTouchable}>
                     <Ionicons name="apple" size={20} color="white" />
-                    <Text
-                      style={[styles.buttonText, {color: 'white', height: 20}]}>
+                    <Text style={[styles.buttonText, styles.bottomTextStyle]}>
                       Sign in with Apple
                     </Text>
                   </TouchableOpacity>
@@ -126,20 +103,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
-
-  // headerContainer: {
-  //   // marginTop: '50%',
-  //   marginLeft: '10%',
-  //   marginRight: '10%',
-  //   justifyContent: 'center',
-  // },
-
+  emailTouchable: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  googleSignIn: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  googleImage: {height: '93%', width: '6%'},
+  appleButtonView: {
+    backgroundColor: 'black',
+    height: hp('6%'),
+  },
+  appleButtonTouchable: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
   buttonViewContainer: {
     backgroundColor: '#F0F0F0',
-    // marginLeft: '2%',
     justifyContent: 'center',
     alignContent: 'center',
-    // width: 304,
     height: hp('6%'),
     marginTop: '1%',
     shadowColor: 'gray',
@@ -151,8 +136,6 @@ const styles = StyleSheet.create({
     marginLeft: wp('5%'),
     marginRight: wp('5%'),
     marginTop: hp('5%'),
-    // borderColor:'red',
-    // borderWidth:2,
   },
 
   // headerIcon: {
@@ -166,8 +149,13 @@ const styles = StyleSheet.create({
     color: 'black',
     marginLeft: '3%',
     marginRight: '3%',
-    fontSize: 18,
     fontWeight: '700',
+    // fontSize: 18,
+    fontSize: wp('4.5%'),
+  },
+  bottomTextStyle: {
+    color: 'white',
+    //   height: 20,
   },
 
   orTitleText: {
@@ -175,7 +163,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'black',
     marginTop: '3%',
-    marginBottom: 10,
+    // marginBottom: 10,
+    marginBottom: hp('1%'),
     fontWeight: '500',
   },
 });

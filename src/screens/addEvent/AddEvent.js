@@ -7,6 +7,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
+
 import ActionSheet from 'react-native-actionsheet';
 import ImagePicker from 'react-native-image-crop-picker';
 
@@ -60,7 +61,7 @@ const showImagePicker = index => {
               : image.path.replace('file://', ''),
         };
         const base64Str = {uri: 'data:image/jpeg;base64,' + image.data};
-        this.setState({
+        setState({
           eventImg: source,
           eventUri: base64Str,
         });
@@ -69,7 +70,7 @@ const showImagePicker = index => {
   }
 };
 
-getEvent = async () => {
+const getEvent = async () => {
   let userId = await getKeyForValue('userId');
   const {
     topic,
@@ -92,7 +93,7 @@ getEvent = async () => {
     eventUri,
     eventCategory,
     audience,
-  } = this.state;
+  } = state;
 
   let isTallooUser = tallooUserType.find(e => e.isSelected == true);
   isTallooUser = isTallooUser
@@ -110,7 +111,7 @@ getEvent = async () => {
     meetingUrl: meetingUrl,
     ZoomMeeting: zoomUrl,
     originatorId: userId,
-    talloo_event: this.state.isTallooUser
+    talloo_event: state.isTallooUser
       ? eventCategory === 'Talloo'
         ? true
         : ''
@@ -132,14 +133,16 @@ getEvent = async () => {
 export default function AddEvent(props) {
   const [eventImg, setEventImg] = useState('');
 
-  //   useEffect(() => {
-  //     eventImg: { uri: eventList.image_url },
-  //   })[];
+  useEffect(() => {
+    eventImg: {
+      uri: eventList.image_url;
+    }
+  });
 
   return (
     <SafeAreaView style={styles.safeAreaContainer}>
       <ActionSheet
-        ref={o => (AddEvent.ActionSheet = o)}
+        // ref={o => (AddEvent.ActionSheet = o)}
         title={'Select a Photo'}
         options={['Take Photo...', 'Choose from Library...', 'Cancel']}
         cancelButtonIndex={2}

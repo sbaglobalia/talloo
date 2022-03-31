@@ -23,10 +23,10 @@ export default function SingupHeader(props) {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: '10%',
-    marginLeft: '5%',
-    marginRight: '5%',
-    justifyContent: 'space-around',
+    // marginTop: '10%',
+
+    marginTop: hp('5%'),
+    marginLeft: hp('2%'),
   },
   headerIcon: {
     // height: '20%',
@@ -46,10 +46,11 @@ const styles = StyleSheet.create({
   titleText: {
     color: 'black',
     // fontSize: 18,
-    fontWeight: '400',
-    fontSize: hp('2.2%'),
+    fontWeight: '600',
+    fontSize: hp('2.1%'),
     marginTop: hp('2%'),
     // width:wp('90%'),
-    height: hp('15%'),
+    height: hp('14%'),
+    width: hp('45%'),
   },
 });

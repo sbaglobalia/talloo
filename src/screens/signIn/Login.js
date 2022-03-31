@@ -35,13 +35,22 @@ export default function Login({navigation}) {
     // console.log(userInfo);
   };
 
+  const handleLogin = () => {
+    if (
+      userInfo.email === 'email@gmail.com' &&
+      userInfo.password === 'password'
+    )
+      // --> "Goto Home Screen"
+      navigation.navigate('Home');
+    else alert('Invalid User');
+  };
   return (
     <>
       {error ? alert(error) : null}
 
       <SafeAreaView style={styles.container}>
         <KeyboardAvoidingView
-          style={{flex: 1, flexDirection: 'column', justifyContent: 'center'}}
+          style={styles.subContainer}
           enabled
           keyboardVerticalOffset={20}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -54,62 +63,49 @@ export default function Login({navigation}) {
 
               <View style={styles.signInContainer}>
                 <TouchableOpacity
-                  style={[styles.buttonView, {backgroundColor: '#DD0000'}]}
+                  style={[styles.buttonView, styles.buttonView1]}
                   // onPress={showMessage}
-                >
-                  <Text style={[styles.buttonText, {color: 'white'}]}>
+                  onPress={() => navigation.navigate('CreateProfile')}>
+                  <Text style={[styles.buttonText, styles.subButtonText]}>
                     SIGN UP
                   </Text>
                 </TouchableOpacity>
 
-                <Text
-                  style={[
-                    styles.subTitleText,
-                    {alignSelf: 'center', marginTop: 15, fontSize: 20},
-                  ]}>
-                  OR
-                </Text>
+                <Text style={[styles.subTitleText, styles.orText]}>OR</Text>
 
                 <CustomTextfield
                   title="Email"
-                  // onChangeText={val => this.onChangeText('email', val)}
+                  // onChangeText={val => onChangeText('email', val)}
                   value={email}
                   onChangeText={value => onChangeText(value, 'email')}
                   capitalize="none"
                   textValue={email}
                   keyboard="email-address"
                   secureText={false}
+                  returnKeyType="next"
                 />
                 <CustomTextfield
                   title="Password"
-                  // onChangeText={val => this.onChangeText('password', val)}
+                  // onChangeText={val => onChangeText('password', val)}
                   value={password}
                   onChangeText={value => onChangeText(value, 'password')}
                   capitalize="none"
                   textValue={password}
                   keyboard="default"
                   secureText={true}
+                  returnKeyType="done"
                 />
 
                 <TouchableOpacity
-                  style={[
-                    styles.buttonView,
-                    {backgroundColor: '#DD0000', marginTop: 30},
-                  ]}
-                  // onPress={handleLogin}
-                >
-                  <Text style={[styles.buttonText, {color: 'white'}]}>
+                  style={[styles.buttonView, styles.loginTouchable]}
+                  onPress={handleLogin}>
+                  <Text style={[styles.buttonText, styles.LoginText]}>
                     LOGIN
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('ForgotPassword')}>
-                  <View
-                    style={{
-                      alignSelf: 'center',
-                      marginTop: 20,
-                      marginBottom: 10,
-                    }}>
+                  <View style={styles.forgotView}>
                     <Text style={styles.subTitleText}>Forgot password?</Text>
                   </View>
                 </TouchableOpacity>
@@ -127,7 +123,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-
+  subContainer: {flex: 1, flexDirection: 'column', justifyContent: 'center'},
   buttonView: {
     width: wp('80%'),
     borderWidth: 2,
@@ -139,6 +135,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
   },
+  loginTouchable: {backgroundColor: '#DD0000', marginTop: 30},
+  buttonView1: {backgroundColor: '#DD0000'},
 
   signInContainer: {
     marginLeft: wp('4%'),
@@ -151,10 +149,18 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textAlign: 'center',
   },
+  LoginText: {color: 'white'},
+  forgotView: {
+    alignSelf: 'center',
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  subButtonText: {color: 'white'},
   subTitleText: {
     fontSize: 18,
     color: 'black',
     fontWeight: '600',
     marginTop: 5,
   },
+  orText: {alignSelf: 'center', marginTop: 15, fontSize: 20},
 });

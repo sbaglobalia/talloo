@@ -1,4 +1,4 @@
-package com.talloo;
+package com.talloo.androidapp;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;

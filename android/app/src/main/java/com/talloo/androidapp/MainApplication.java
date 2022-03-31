@@ -1,4 +1,4 @@
-package com.talloo;
+package com.talloo.androidapp;
 
 import android.app.Application;
 import android.content.Context;
