@@ -1,60 +1,45 @@
 // Dependancies
 import {StyleSheet, Text, View, TextInput} from 'react-native';
-import React, {Component} from 'react';
+import React from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export function CustomTextfield(props) {
-  const {
-    title,
-    onChangeText,
-    capitalize,
-    textValue,
-    keyboard,
-    secureText,
-    isEditable,
-    placeHolder,
-    returnKeyType,
-    onSubmitEditing,
-    inputRef,
-    containerStyle,
-    key,
-    inputStyle,
-    isInvalid,
-    onFocus,
-  } = props;
+export default function CustomTextfield=(props)=> {
   return (
-    <View style={[styles.sectionView, containerStyle]}>
+    <View style={[styles.sectionView, props.containerStyle]}>
       <Text
-        style={[styles.subTitleText, {color: isInvalid ? '#DD0000' : 'black'}]}>
-        {title}
+        style={[
+          styles.subTitleText,
+          {color: props.isInvalid ? '#DD0000' : 'black'},
+        ]}>
+        {props.title}
       </Text>
       <TextInput
-        key={key}
-        ref={input => inputRef && inputRef(input)}
-        placeholder={placeHolder != undefined ? placeHolder : ''}
+        key={props.key}
+        // ref={(input) => inputRef && inputRef(input)}
+        placeholder={props.placeHolder != undefined ? placeHolder : ''}
         style={[
           styles.input,
           {
-            borderColor: isInvalid ? '#DD0000' : 'lightgray',
-            borderWidth: isInvalid ? 1 : 1,
+            borderColor: props.isInvalid ? '#DD0000' : 'lightgray',
+            borderWidth: props.isInvalid ? 1 : 1,
           },
-          inputStyle,
+          props.inputStyle,
         ]}
-        autoCapitalize={capitalize}
-        onChangeText={onChangeText}
-        value={textValue}
-        keyboardType={keyboard}
-        secureTextEntry={secureText}
-        editable={isEditable == undefined ? true : isEditable}
-        returnKeyType={returnKeyType}
+        autoCapitalize={props.capitalize}
+        onChangeText={props.onChangeText}
+        value={props.textValue}
+        keyboardType={props.keyboard}
+        secureTextEntry={props.secureText}
+        editable={props.isEditable == undefined ? true : props.isEditable}
+        returnKeyType={props.returnKeyType}
         onSubmitEditing={event => {
-          onSubmitEditing != undefined ? onSubmitEditing(event) : null;
+          props.onSubmitEditing != undefined ? onSubmitEditing(event) : null;
         }}
         onFocus={event => {
-          onFocus != undefined ? onFocus() : null;
+          props.onFocus != undefined ? onFocus() : null;
         }}
         blurOnSubmit={false}
         selectionColor="#000"
@@ -67,9 +52,6 @@ const styles = StyleSheet.create({
   sectionView: {
     justifyContent: 'flex-start',
     flexDirection: 'column',
-    //width: '100%',
-    // marginTop: 10,
-    //flex: 1
   },
   subTitleText: {
     fontSize: wp('5%'),
@@ -79,7 +61,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: wp('90%'),
-    height: hp('6%'),
+    height: hp('5.5%'),
     backgroundColor: '#fff',
     padding: wp('2%'),
     color: 'black',
