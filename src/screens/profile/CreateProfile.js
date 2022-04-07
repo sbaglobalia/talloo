@@ -6,35 +6,36 @@ import {
   TextInput,
   Dimensions,
   ScrollView,
-  ImageBackgroung,
   ImageBackground,
   TouchableOpacity,
   Image,
 } from 'react-native';
-import React, {useState} from 'react';
-// import DraggableFlatList from 'react-native-draggable-flatlist';
-import {NavigationActions, StackActions} from 'react-navigation';
+import React, {useState, useRef} from 'react';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import {CustomTextfield} from '../../components/CustomTextfield';
-import {TextInputMask} from 'react-native-masked-text';
 import {IMAGE_CONSTANT} from '../../utils/Constant';
-import CommanRadiusButton from '../../components/CommanRadiusButton';
 
 const window = Dimensions.get('window');
 
 export default function CreateProfile() {
   const image = {uri: 'https://reactjs.org/logo-og.png'};
-  const [profileDate, setProfileData] = useState([]);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [jobtitle, setjobtitle] = useState('');
   const [companyname, setCompanyname] = useState('');
+  const [profileDate, setProfileData] = useState([]);
+  const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [location, setLocation] = useState('');
+  const [profileUri, setProfileUri] = useState('');
+  const [SocialLinkName, setSocialLinkName] = useState('');
+  const [SocialLinkDescrip, setSocialLinkDescrip] = useState('');
+  const [socialLink, setSocialLink] = useState('');
+
+  const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [address_one, setAddress_one] = useState('');
   const [address_two, setAddress_two] = useState('');
@@ -43,7 +44,6 @@ export default function CreateProfile() {
   const [zipcode, SetZipcode] = useState('');
   const [description, setDescription] = useState('');
   const [profileImg, setProfileImg] = useState('');
-  const [profileUri, setProfileUri] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [currentUserId, setCurrentUserId] = useState('');
   const [isCreateProfile, setIsCreateProfile] = useState('');
@@ -65,30 +65,37 @@ export default function CreateProfile() {
   const [previousFocusDisabled, setpreviousFocusDisabled] = useState(false);
   const [buttonsDisabled, setbuttonsDisabled] = useState(false);
   const [buttonsHidden, setbuttonsHidden] = useState(false);
-  const [location, setLocation] = useState('');
   const [signInBy, setSignInBy] = useState('');
   const [icon1, setIcon1] = useState('eye-off');
   const [valueIconEmail, setValueIconEmail] = useState('');
   const [icon, setIcon] = useState('eye-off');
   const [valueIconNumber, setValueIconNumber] = useState('');
   const [data, setData] = useState([]);
-  const [SocialLinkName, setSocialLinkName] = useState('');
-  const [SocialLinkDescrip, setSocialLinkDescrip] = useState('');
-  const [socialLink, setSocialLink] = useState('');
   const [textInput, setTextInput] = useState([]);
   const [inputData, setInputData] = useState([]);
   const [scrollEnabled, setScrollEnabled] = useState(false);
 
+  console.log('firstname+++', firstname);
+  console.log('lastname+++', lastname);
+  console.log('jobtitle+++', jobtitle);
+  console.log('companyname+++', companyname);
+  console.log('email+++', email);
+  console.log('phoneNumber+++', phoneNumber);
+  console.log('location+++', location);
+  console.log('SocialLinkName+++', SocialLinkName);
+  console.log('SocialLinkDescrip+++', SocialLinkDescrip);
+  console.log('socialLink+++', socialLink);
+
+
+
+  const secondTextInput = useRef();
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView keyboardShouldPersistTaps="always" scrollEnabled={true}>
-        <View
-          style={[
-            styles.profilePicContainer, // {flex: 1, marginBottom: 10},
-          ]}>
+        <View style={[styles.profilePicContainer]}>
           <View style={[styles.input, styles.input1]}>
             <ImageBackground
-              // source={this.state.profileImg}
               source={image}
               imageStyle={styles.imageStyles}
               style={styles.imageBackgroundStyle}
@@ -97,7 +104,6 @@ export default function CreateProfile() {
                 <Text style={[styles.titleText, styles.addProfiletext]}>
                   Add Profile Photo
                 </Text>
-                {/* <TouchableOpacity onPress={() => this.ActionSheet.show()}>*/}
                 <View style={styles.plusIcon}>
                   <Text style={styles.plusText}>+</Text>
                 </View>
@@ -117,19 +123,20 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="First Name*"
-              // onChangeText={val => this.onChangeText('firstname', val)}
+              onChangeText={firstname => setFirstname(firstname)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
               secureText={false}
               containerStyle={styles.inputContainer}
+              
               // onFocus={() => this.handleFocus(0)}
               isEditable={signInBy == 'Apple' ? false : true}
             />
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Last Name*"
-              // onChangeText={val => this.onChangeText('firstname', val)}
+              onChangeText={lastname => setLastname(lastname)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
@@ -141,7 +148,7 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Job Title*"
-              // onChangeText={val => this.onChangeText('firstname', val)}
+              onChangeText={jobtitle => setjobtitle(jobtitle)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
@@ -154,7 +161,7 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Company Name*"
-              // onChangeText={val => this.onChangeText('firstname', val)}
+              onChangeText={companyname => setCompanyname(companyname)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
@@ -175,7 +182,7 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Company Email*"
-              // onChangeText={val => this.onChangeText('firstname', val)}
+              onChangeText={email => setEmail(email)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
@@ -188,10 +195,11 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Contact Number*"
-              // onChangeText={val => onChangeText('firstname', val)}
+              onChangeText={phoneNumber => setPhoneNumber(phoneNumber)}
               capitalize="sentences"
               // textValue={this.state.firstname}
-              keyboard="default"
+              // keyboard="default"
+              keyboardType="numeric"
               secureText={false}
               containerStyle={styles.inputContainer}
               // onFocus={() => this.handleFocus(0)}
@@ -201,7 +209,7 @@ export default function CreateProfile() {
             <CustomTextfield
               // inputRef={input => (this.textInput[0] = input)}
               placeHolder="Location*"
-              // onChangeText={val => onChangeText('firstname', val)}
+              onChangeText={location => setLocation(location)}
               capitalize="sentences"
               // textValue={this.state.firstname}
               keyboard="default"
@@ -225,6 +233,9 @@ export default function CreateProfile() {
                 autoCapitalize="sentences"
                 maxLength={20}
                 // onChangeText={(text) => this.addValues(text, index, 'linkname')}
+                onChangeText={SocialLinkName =>
+                  setSocialLinkName(SocialLinkName)
+                }
               />
               <TextInput
                 placeholder="80 characters maximum."
@@ -238,13 +249,20 @@ export default function CreateProfile() {
                   styles.description,
                 ]}
                 // onChangeText={(text) => this.addValues(text, index, 'linkDescri')}
+                onChangeText={SocialLinkDescrip =>
+                  setSocialLinkDescrip(SocialLinkDescrip)
+                }
               />
               <TextInput
                 placeholder="http://"
                 style={styles.input}
                 // defaultValue={cur.urlLink}
+                multiline={true}
+                editable={false}
                 autoCapitalize="none"
+                dataDetectorTypes="link"
                 // onChangeText={(text) => this.addValues(text, index, 'urlLink')}
+                onChangeText={socialLink => setSocialLink(socialLink)}
               />
             </View>
 

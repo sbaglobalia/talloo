@@ -7,6 +7,7 @@ import Home from '../screens/home/Home';
 import People from '../screens/people/People';
 import SignIn from '../screens/signIn/SignIn';
 import Ionicons from 'react-native-vector-icons/SimpleLineIcons';
+import {IMAGE_CONSTANT} from '../../../talloo/src/utils/Constant';
 
 const Tab = createBottomTabNavigator(
   {
@@ -20,28 +21,31 @@ const Tab = createBottomTabNavigator(
       tabBarIcon: ({focused, horizontal, tintColor}) => {
         const {routeName} = navigation.state;
         let IconComponent = Ionicons;
-        let iconName;
         if (routeName === 'Home') {
           focused ? (
             <Image
-              source={require('../../assets/sel_today.png')}
+              // source={require('../../assets/sel_today.png')}
+              source={IMAGE_CONSTANT.SELECT_TODAY}
               style={{height: 30, width: 30}}
             />
           ) : (
             <Image
-              source={require('../../assets/unsel_today.png')}
+              // source={require('../../assets/unsel_today.png')}
+              source={IMAGE_CONSTANT.UNSEL_TODAY}
               style={{height: 30, width: 30}}
             />
           );
         } else if (routeName === 'People') {
           focused ? (
             <Image
-              source={require('../../assets/sel_user.png')}
+              // source={require('../../assets/sel_user.png')}
+              source={IMAGE_CONSTANT.SEL_USER}
               style={{height: 30, width: 30}}
             />
           ) : (
             <Image
-              source={require('../../assets/unsel_user.png')}
+              // source={require('../../assets/unsel_user.png')}
+              source={IMAGE_CONSTANT.UNSEL_USER}
               style={{height: 30, width: 30}}
             />
           );

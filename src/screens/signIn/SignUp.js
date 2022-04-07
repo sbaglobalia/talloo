@@ -30,44 +30,22 @@ export default function SignUp() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [showCaptch, setShowCaptch] = useState(false);
-  const [captchVerifier, setCaptchVerifier] = useState('');
-  // const [userValidation, setuserValidation] = useState([
-  //   {
-  //     type: 'firstname',
-  //     isInvalid: false,
-  //   },
-  //   {
-  //     type: 'lastname',
-  //     isInvalid: false,
-  //   },
-  //   {
-  //     type: 'phoneNumberFormat',
-  //     isInvalid: false,
-  //   },
-  //   {
-  //     type: 'password',
-  //     isInvalid: false,
-  //   },
-  //   {
-  //     type: 'email',
-  //     isInvalid: false,
-  //   },
-  // ]);
+  const [captchaVerifier, setCaptchaVerifier] = useState('');
+  const [emailUserInfo, setEmailUserInfo] = useState({});
+  const [userData, setUserData] = useState({});
+  const [userValidation, setuserValidation] = useState([
+    {type: 'firstname', isInvalid: false},
+    {type: 'lastname', isInvalid: false},
+    {type: 'phoneNumberFormat', isInvalid: false},
+    {type: 'password', isInvalid: false},
+    {type: 'email', isInvalid: false},
+  ]);
+
   console.log('First Name::', firstname);
   console.log('Last Name::', lastname);
   console.log('Email ::', email);
   console.log('Pass::', password);
 
-  // const onMessage = async event => {
-  //   const token = event;
-  //   SignUp.captchaForm.hide();
-  //   const captchaVerifier = {
-  //     type: 'recaptcha',
-  //     verify: () => Promise.resolve(token),
-  //   };
-  // const [text, onChangeText] = useState('');
-  // console.log('onchangeText', onChangeText);
-  // const [number, onChangeNumber] = useState(null);
   return (
     <>
       <View style={styles.container}>

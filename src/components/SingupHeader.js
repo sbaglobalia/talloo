@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     // marginTop: '10%',
 
-    marginTop: hp('5%'),
+    marginTop: hp('4%'),
     marginLeft: hp('2%'),
   },
   headerIcon: {

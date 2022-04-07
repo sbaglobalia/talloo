@@ -32,7 +32,7 @@ export default function Login({navigation}) {
 
   const onChangeText = (value, fieldName) => {
     setUserInfo({...userInfo, [fieldName]: value});
-    // console.log(userInfo);
+    console.log(userInfo);
   };
 
   const handleLogin = () => {
@@ -40,7 +40,6 @@ export default function Login({navigation}) {
       userInfo.email === 'email@gmail.com' &&
       userInfo.password === 'password'
     )
-      // --> "Goto Home Screen"
       navigation.navigate('Home');
     else alert('Invalid User');
   };
@@ -64,7 +63,6 @@ export default function Login({navigation}) {
               <View style={styles.signInContainer}>
                 <TouchableOpacity
                   style={[styles.buttonView, styles.buttonView1]}
-                  // onPress={showMessage}
                   onPress={() => navigation.navigate('CreateProfile')}>
                   <Text style={[styles.buttonText, styles.subButtonText]}>
                     SIGN UP
@@ -75,7 +73,6 @@ export default function Login({navigation}) {
 
                 <CustomTextfield
                   title="Email"
-                  // onChangeText={val => onChangeText('email', val)}
                   value={email}
                   onChangeText={value => onChangeText(value, 'email')}
                   capitalize="none"
@@ -86,7 +83,6 @@ export default function Login({navigation}) {
                 />
                 <CustomTextfield
                   title="Password"
-                  // onChangeText={val => onChangeText('password', val)}
                   value={password}
                   onChangeText={value => onChangeText(value, 'password')}
                   capitalize="none"

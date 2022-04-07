@@ -1,0 +1,207 @@
+{
+  "project_info": {
+    "project_number": "652298048160",
+    "firebase_url": "https://talloo-app.firebaseio.com",
+    "project_id": "talloo-app",
+    "storage_bucket": "talloo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652298048160:android:276f27dc4331c64f",
+        "android_client_info": {
+          "package_name": "com.talloo.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652298048160-marpubehid6tjh57dpr5j5ehtk7c1qd7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.android",
+            "certificate_hash": "e3821da6b4fd4530089e47f6a3c09cc92ab8b214"
+          }
+        },
+        {
+          "client_id": "652298048160-p8j9cb55bpe774r7idl74u5q4ti5f0k8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.android",
+            "certificate_hash": "4a809253405d5aaee6632c767910c921bfe48000"
+          }
+        },
+        {
+          "client_id": "652298048160-viie9g1b63ta9lpt1l6teedq0qvrqj8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoSw_L8e7DEzMRE8Bz-7JecFc77X0SpLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652298048160-ue8n2tnbidoi57r5nk2e49hrt7shr04k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "652298048160-75u8n1abuilhjieref41mvj2dnlbmi06.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.talloo.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652298048160:android:80ef698b2ea7e5025c6fc5",
+        "android_client_info": {
+          "package_name": "com.talloo.androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652298048160-5rfjn0cbhvv0kqma6vgqcrla372hjv1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.androidapp",
+            "certificate_hash": "1a8d5fca1b77732e7f08d763d5d5c74fe7ca244a"
+          }
+        },
+        {
+          "client_id": "652298048160-8bs3dsfd9en6ag3m88adlfo2o9tcv4nb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.androidapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "652298048160-lu2il2jistfjena9vvjck1fgfcaq7d6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.androidapp",
+            "certificate_hash": "4a809253405d5aaee6632c767910c921bfe48000"
+          }
+        },
+        {
+          "client_id": "652298048160-m537tr4o4l2bi4eoamdhimf4l4arell5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.androidapp",
+            "certificate_hash": "da92e4f953cbd3852f7fd2e534549f78638b0496"
+          }
+        },
+        {
+          "client_id": "652298048160-qmcc52sj3bei9kvfc13rttm0ni6ne40f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.androidapp",
+            "certificate_hash": "f3733c6a5e932fb332d62c1fc47b330fdeb41515"
+          }
+        },
+        {
+          "client_id": "652298048160-viie9g1b63ta9lpt1l6teedq0qvrqj8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoSw_L8e7DEzMRE8Bz-7JecFc77X0SpLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652298048160-ue8n2tnbidoi57r5nk2e49hrt7shr04k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "652298048160-75u8n1abuilhjieref41mvj2dnlbmi06.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.talloo.ios"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652298048160:android:1653b214363646fb5c6fc5",
+        "android_client_info": {
+          "package_name": "com.talloo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652298048160-ags6reqge8qsmchiq0ig1aoo73gfblc6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.app",
+            "certificate_hash": "529eaca59ed6c97fd296e427728eff8d3615baef"
+          }
+        },
+        {
+          "client_id": "652298048160-l9il72asovvnqmftgug0fvh8f0iu5a21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "652298048160-nknooi5a4f0fbc4bd4rbfharvj4o5bt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.app",
+            "certificate_hash": "7c25746778b577c7989a697aa7c4b3e144f4ba13"
+          }
+        },
+        {
+          "client_id": "652298048160-osga204bdn77ans3b4lbbdj2c8d1jqpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talloo.app",
+            "certificate_hash": "add603c940c78d6e40468dacf706a4a99ac48717"
+          }
+        },
+        {
+          "client_id": "652298048160-viie9g1b63ta9lpt1l6teedq0qvrqj8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoSw_L8e7DEzMRE8Bz-7JecFc77X0SpLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652298048160-ue8n2tnbidoi57r5nk2e49hrt7shr04k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "652298048160-75u8n1abuilhjieref41mvj2dnlbmi06.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.talloo.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

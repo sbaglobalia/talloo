@@ -7,68 +7,72 @@ import {
   ImageBackground,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
+import {
+  ltrim,
+  getKeyForValue,
+  formatDateTime,
+  PLACE_API_KEY,
+  onScroll,
+} from '../../helper/CommonHelper';
 
-import ActionSheet from 'react-native-actionsheet';
-import ImagePicker from 'react-native-image-crop-picker';
-
-const showImagePicker = index => {
-  if (index == 0) {
-    //Open camera
-    ImagePicker.openCamera({
-      cropping: true,
-      avoidEmptySpaceAroundImage: true,
-      cropperCircleOverlay: true,
-      compressImageMaxWidth: 640,
-      compressImageMaxHeight: 480,
-      freeStyleCropEnabled: true,
-      includeBase64: true,
-    })
-      .then(image => {
-        const source = {
-          uri:
-            Platform.OS === 'android'
-              ? image.path
-              : image.path.replace('file://', ''),
-        };
-        const base64Str = {uri: 'data:image/jpeg;base64,' + image.data};
-        // setState({
-        //   eventImg: source,
-        //   eventUri: base64Str,
-        // });
-      })
-      .catch(e => {});
-  } else if (index == 1) {
-    //Open from library
-    ImagePicker.openPicker({
-      width: 500,
-      height: 500,
-      cropping: true,
-      cropperCircleOverlay: true,
-      freeStyleCropEnabled: true,
-      avoidEmptySpaceAroundImage: true,
-      includeBase64: true,
-      compressImageMaxWidth: 1000,
-      compressImageMaxHeight: 1000,
-      compressImageQuality: 1,
-      compressVideoPreset: 'HighQuality',
-      includeExif: true,
-    })
-      .then(image => {
-        const source = {
-          uri:
-            Platform.OS === 'android'
-              ? image.path
-              : image.path.replace('file://', ''),
-        };
-        const base64Str = {uri: 'data:image/jpeg;base64,' + image.data};
-        setState({
-          eventImg: source,
-          eventUri: base64Str,
-        });
-      })
-      .catch(e => console.log('gallery'));
-  }
-};
+// const showImagePicker = index => {
+//   if (index == 0) {
+//     //Open camera
+//     ImagePicker.openCamera({
+//       cropping: true,
+//       avoidEmptySpaceAroundImage: true,
+//       cropperCircleOverlay: true,
+//       compressImageMaxWidth: 640,
+//       compressImageMaxHeight: 480,
+//       freeStyleCropEnabled: true,
+//       includeBase64: true,
+//     })
+//       .then(image => {
+//         const source = {
+//           uri:
+//             Platform.OS === 'android'
+//               ? image.path
+//               : image.path.replace('file://', ''),
+//         };
+//         const base64Str = {uri: 'data:image/jpeg;base64,' + image.data};
+//         // setState({
+//         //   eventImg: source,
+//         //   eventUri: base64Str,
+//         // });
+//       })
+//       .catch(e => {});
+//   } else if (index == 1) {
+//     //Open from library
+//     ImagePicker.openPicker({
+//       width: 500,
+//       height: 500,
+//       cropping: true,
+//       cropperCircleOverlay: true,
+//       freeStyleCropEnabled: true,
+//       avoidEmptySpaceAroundImage: true,
+//       includeBase64: true,
+//       compressImageMaxWidth: 1000,
+//       compressImageMaxHeight: 1000,
+//       compressImageQuality: 1,
+//       compressVideoPreset: 'HighQuality',
+//       includeExif: true,
+//     })
+//       .then(image => {
+//         const source = {
+//           uri:
+//             Platform.OS === 'android'
+//               ? image.path
+//               : image.path.replace('file://', ''),
+//         };
+//         const base64Str = {uri: 'data:image/jpeg;base64,' + image.data};
+//         setState({
+//           eventImg: source,
+//           eventUri: base64Str,
+//         });
+//       })
+//       .catch(e => console.log('gallery'));
+//   }
+// };
 
 const getEvent = async () => {
   let userId = await getKeyForValue('userId');

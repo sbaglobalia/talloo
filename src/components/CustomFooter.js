@@ -19,18 +19,32 @@ import {
 const WIDTH = Dimensions.get('window').width;
 import Icon from 'react-native-vector-icons/Feather';
 import React from 'react';
+import { StackActions } from '@react-navigation/native';
 
+export default function CustomFooter(props) {
+  const {
+    navigation,
+    isGoing,
+    isBack,
+    isChat,
+    navigateTochat,
+    showEvent,
+    handleClick,
+    isTalloo,
+    showOnlineEvent,
+    showSaveEvent,
+    isProfile,
+    shareEvent,
+    plan,
+    isEnableProfile,
+    url,
+  } = props;
 
- export default function CustomFooter(props) {
-
-  _renderTallooUserEvent = (props) => {
+  const _renderTallooUserEvent = props => {
     const {duplicateEvenet, updateEvent, deleteEvent, shareEvent, isGoing} =
       props;
-    <View
-      style={styles.container}
-      >
-      <View
-        style={styles.subContainer}>
+    <View style={styles.container}>
+      <View style={styles.subContainer}>
         <TouchableOpacity
           style={[
             style.buttonContainer,
@@ -48,11 +62,9 @@ import React from 'react';
             resizeMode="contain"
           />
         </TouchableOpacity>
-  
+
         <TouchableOpacity
-          style={[
-            styles.buttonContainer,styles.buttonContainerTouchable
-          ]}
+          style={[styles.buttonContainer, styles.buttonContainerTouchable]}
           onPress={duplicateEvent}>
           <Image
             source={EVENT_IMAGE_CONSTANT.EVENT_DUPLICATE}
@@ -60,12 +72,9 @@ import React from 'react';
             resizeMode="contain"
           />
         </TouchableOpacity>
-  
+
         <TouchableOpacity
-          style={[
-            styles.buttonContainer,
-            styles.buttonContainerTouchable
-          ]}
+          style={[styles.buttonContainer, styles.buttonContainerTouchable]}
           onPress={updateEvent}>
           <Image
             source={EVENT_IMAGE_CONSTANT.EVENT_EDIT}
@@ -73,91 +82,111 @@ import React from 'react';
             resizeMode="contain"
           />
         </TouchableOpacity>
-  
+
         <TouchableOpacity
-          style={[
-            styles.buttonContainer,styles.shareEventTouchable
-          ]}
+          style={[styles.buttonContainer, styles.shareEventTouchable]}
           onPress={shareEvent}>
           <Icon name="share" size={WIDTH * 0.06} color="#fff" />
         </TouchableOpacity>
       </View>
     </View>;
   };
-  
-  _renderJoinOnlineEvent = (props) => {
-    const { joinOnlineEvent } = props;
+
+  const _renderJoinOnlineEvent = props => {
+    const {joinOnlineEvent} = props;
     return (
       <View style={styles.rightViewContainer}>
         <Text style={styles.eventText}>{'Join Online Event'}</Text>
-        <TouchableOpacity style={[styles.buttonContainer, styles.redColor]} onPress={joinOnlineEvent}>
+        <TouchableOpacity
+          style={[styles.buttonContainer, styles.redColor]}
+          onPress={joinOnlineEvent}>
           <Image
             source={EVENT_IMAGE_CONSTANT.EVENT_ANGEL_RIGHT}
             style={styles.imgSize}
-            resizeMode='contain'
+            resizeMode="contain"
           />
         </TouchableOpacity>
       </View>
-    )
-  }
-  
-  _renderAddEvent = (props) => {
-    const { addEvent, eventTitle } = props;
+    );
+  };
+
+  const _renderAddEvent = props => {
+    const {addEvent, eventTitle} = props;
     return (
       <View style={styles.rightViewContainer}>
-  
-        <TouchableOpacity style={[style.buttonContainer, { backgroundColor: '#000' }]} onPress={addEvent}>
-          <Text style={[styles.eventText, {color: '#fff'} ]}>{eventTitle}</Text>
+        <TouchableOpacity
+          style={[styles.buttonContainer, {backgroundColor: '#000'}]}
+          onPress={addEvent}>
+          <Text style={[styles.eventText, {color: '#fff'}]}>{eventTitle}</Text>
         </TouchableOpacity>
       </View>
-    )
-  }
-  _renderProfileShare = (props) => {
-    const { shareProfile, isSaved, saveProfile, } = props;
-    return(
+    );
+  };
+  const _renderProfileShare = props => {
+    const {shareProfile, isSaved, saveProfile} = props;
+    return (
       <View style={styles.container}>
-      <View style={styles.subContainer}>
-      <TouchableOpacity style={styles.buttonContainer}
-      onPress={shareProfile}>
-      <Image
-      source={NEW_PROFILE_IMG.EXTERNAL}
-      style={style.imageContainer}
-      resizeMode='contain'/>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonContainer,{
-        backgroundColor: 'black',marginRight: WIDTH * 0.02
-      }]}
-      onPress={saveProfile}>
-      <Image
-      source={isSaved ? PROFILE_IMAGE_CONSTANT.SAVE_PROFILE : PROFILE_IMAGE_CONSTANT.UNSAVE_PROFILE}
-      style={style.imageContainer}
-      resizeMode='contain'
-      />
-      
-      </TouchableOpacity>
+        <View style={styles.subContainer}>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={shareProfile}>
+            <Image
+              source={NEW_PROFILE_IMG.EXTERNAL}
+              style={styles.imageContainer}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.buttonContainer,
+              {
+                backgroundColor: isSaved ? '#DD0000' : 'white',
+                backgroundColor: 'black',
+                marginRight: WIDTH * 0.02,
+              },
+            ]}
+            onPress={saveProfile}>
+            <Image
+              source={
+                isSaved
+                  ? PROFILE_IMAGE_CONSTANT.SAVE_PROFILE
+                  : PROFILE_IMAGE_CONSTANT.UNSAVE_PROFILE
+              }
+              style={styles.imageContainer}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
       </View>
+    );
+  };
+
+  return (
+    <View style={styles.returnContainer}>
+      <View style={styles.returnSubContainer}>
+        <View style={[styles.container, {zIndex: 1}]}>
+          <TouchableOpacity style={styles.returnContainerTouchable}
+          //improvement...
+            onPress{()=> isBack ? props.navigation.dispatch(
+              StackActions.reset({
+                index: 0,
+                actions: [NavigationActions.navigate({routeName: 'Tab'})]
+                //remaining...
+              })
+            )}>
+            </TouchableOpacity>
+        </View>
       </View>
-    )
-  
-
-    
-   const { navigation, isGoing, isBack, isChat,
-    navigateTochat, showEvent, handleClick,
-    isTalloo, showOnlineEvent, showSaveEvent,
-    isProfile, shareEvent, plan, isEnableProfile, url } = props;
-
-    <View style={}>
     </View>
-    
   );
 }
 
 const styles = StyleSheet.create({
- container: {
-        alignSelf: 'flex-end',
-        marginRight: 15,
- },
- subContainer: {
+  container: {
+    alignSelf: 'flex-end',
+    marginRight: 15,
+  },
+  subContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignContent: 'center',
@@ -168,8 +197,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    width: WIDTH * 0.30,
-    height: WIDTH * 0.10,
+    width: WIDTH * 0.3,
+    height: WIDTH * 0.1,
     borderRadius: parseInt((WIDTH * 0.12) / 5),
   },
   imageContainer: {
@@ -182,31 +211,54 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'flex-end',
     marginRight: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   buttonContainerTouchable: {
     backgroundColor: 'white',
     borderColor: 'black',
     // borderWidth: 2,
-    marginRight: WIDTH * 0.02
+    marginRight: WIDTH * 0.02,
   },
-  eventText: { 
-    fontSize: WIDTH * 0.04, 
-    fontWeight: '700', 
-    marginRight: WIDTH * 0.02 
+  eventText: {
+    fontSize: WIDTH * 0.04,
+    fontWeight: '700',
+    marginRight: WIDTH * 0.02,
   },
   redColor: {
     backgroundColor: '#DD0000',
   },
   shareEventTouchable: {
     // backgroundColor: redColor,
-      backgroundColor: '#DD0000',
-      marginRight: WIDTH * 0.02,
-    },
-    imgSize:  {
-      width: WIDTH * 0.06,
-      height: WIDTH * 0.06 
-    },
-    customElements
-}
-);
+    backgroundColor: '#DD0000',
+    marginRight: WIDTH * 0.02,
+  },
+  imgSize: {
+    width: WIDTH * 0.06,
+    height: WIDTH * 0.06,
+  },
+  returnContainer: {
+    backgroundColor: 'white',
+    marginBottom: 5,
+    justifyContent: 'flex-end',
+    bottom: 0,
+    borderTopWidth: 1,
+    borderColor: '#b4b4b4',
+  },
+  returnSubContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    zIndex: 1,
+  },
+  returnContainerTouchable: {
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: WIDTH * 0.12,
+    height: WIDTH * 0.12,
+    borderRadius: parseInt((WIDTH * 0.12) / 2),
+    zIndex: 1,
+  },
+});

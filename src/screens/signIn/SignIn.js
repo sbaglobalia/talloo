@@ -1,4 +1,3 @@
-// Dependencies
 import React from 'react';
 import {
   StyleSheet,
@@ -17,17 +16,12 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Ionicons from 'react-native-vector-icons/Fontisto';
-
-// Screens
 import SingupHeader from '../../../../talloo/src/components/SingupHeader';
-
-//Components
-import {EVENT_CATEGORY_CONSTANT} from '../../utils/Constant';
+import {IMAGE_CONSTANT} from '../../utils/Constant';
 
 const majorVersionIOS = parseInt(Platform.Version, 10);
 
 const SignIn = ({navigation}) => {
-  console.log('Hello signIp');
   const _singInWithGoogle = () => {
     Alert.alert('SignIn Screen onPress Called Google');
   };
@@ -51,7 +45,6 @@ const SignIn = ({navigation}) => {
                 onPress={() => navigation.navigate('Login')}
                 style={styles.emailTouchable}>
                 <Ionicons name="email" size={20} color="gray" />
-                {/* marginLeft: 20 */}
                 <Text style={styles.buttonText}>Continue with Email</Text>
               </TouchableOpacity>
             </View>
@@ -60,11 +53,10 @@ const SignIn = ({navigation}) => {
 
             <View style={styles.buttonViewContainer}>
               <TouchableOpacity
-                // onPress={() => _signIn()}
                 onPress={_singInWithGoogle}
                 style={styles.googleSignIn}>
                 <Image
-                  source={EVENT_CATEGORY_CONSTANT.GOOGLE}
+                  source={IMAGE_CONSTANT.GOOGLE}
                   style={styles.googleImage}
                   resizeMode="contain"
                 />
@@ -77,7 +69,6 @@ const SignIn = ({navigation}) => {
                 <View
                   style={[styles.buttonViewContainer, styles.appleButtonView]}>
                   <TouchableOpacity
-                    // onPress={() => _singInWithApple()}
                     onPress={() => _singInWithApple()}
                     style={styles.appleButtonTouchable}>
                     <Ionicons name="apple" size={20} color="white" />
@@ -138,24 +129,15 @@ const styles = StyleSheet.create({
     marginTop: hp('5%'),
   },
 
-  // headerIcon: {
-  //   height: '20%',
-  //   width: '20%',
-  //   borderColor: 'blue',
-  //   borderWidth: 2,
-  // },
-
   buttonText: {
     color: 'black',
     marginLeft: '3%',
     marginRight: '3%',
     fontWeight: '700',
-    // fontSize: 18,
     fontSize: wp('4.5%'),
   },
   bottomTextStyle: {
     color: 'white',
-    //   height: 20,
   },
 
   orTitleText: {
@@ -163,7 +145,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'black',
     marginTop: '3%',
-    // marginBottom: 10,
     marginBottom: hp('1%'),
     fontWeight: '500',
   },
