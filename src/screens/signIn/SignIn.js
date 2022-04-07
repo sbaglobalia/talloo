@@ -16,12 +16,16 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Ionicons from 'react-native-vector-icons/Fontisto';
+import { useNavigation } from "@react-navigation/native";
 import SingupHeader from '../../../../talloo/src/components/SingupHeader';
 import {IMAGE_CONSTANT} from '../../utils/Constant';
 
 const majorVersionIOS = parseInt(Platform.Version, 10);
 
-const SignIn = ({navigation}) => {
+const SignIn = () => {
+
+  const navigation = useNavigation();
+
   const _singInWithGoogle = () => {
     Alert.alert('SignIn Screen onPress Called Google');
   };

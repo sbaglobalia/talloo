@@ -1,18 +1,18 @@
 // Dependancies
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export default function CustomTextfield=(props)=> {
+export default function CustomTextfield(props) {
   return (
     <View style={[styles.sectionView, props.containerStyle]}>
       <Text
         style={[
           styles.subTitleText,
-          {color: props.isInvalid ? '#DD0000' : 'black'},
+          { color: props.isInvalid ? '#DD0000' : 'black' },
         ]}>
         {props.title}
       </Text>
