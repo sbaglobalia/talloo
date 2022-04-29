@@ -6,12 +6,12 @@ import {
   TextInput,
   Platform,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import auth from '@react-native-firebase/auth';
 import CustomButton from '../../components/CustomButton';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -19,8 +19,7 @@ import SignupHeader from '../../components/SingupHeader';
 import PhoneInput from 'react-native-phone-number-input';
 import ParsedText from 'react-native-parsed-text';
 import CustomTextfield from '../../components/CustomTextfield';
-import { SafeAreaView } from 'react-native-safe-area-context';
-
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
@@ -36,11 +35,11 @@ export default function SignUp() {
   const [emailUserInfo, setEmailUserInfo] = useState({});
   const [userData, setUserData] = useState({});
   const [userValidation, setuserValidation] = useState([
-    { type: 'firstname', isInvalid: false },
-    { type: 'lastname', isInvalid: false },
-    { type: 'phoneNumberFormat', isInvalid: false },
-    { type: 'password', isInvalid: false },
-    { type: 'email', isInvalid: false },
+    {type: 'firstname', isInvalid: false},
+    {type: 'lastname', isInvalid: false},
+    {type: 'phoneNumberFormat', isInvalid: false},
+    {type: 'password', isInvalid: false},
+    {type: 'email', isInvalid: false},
   ]);
 
   console.log('First Name::', firstname);
@@ -49,7 +48,7 @@ export default function SignUp() {
   console.log('Pass::', password);
 
   const handleSignUp = async () => {
-    console.log("all data===>>>",email, password);
+    console.log('all data===>>>', email, password);
     auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
@@ -66,7 +65,7 @@ export default function SignUp() {
 
         console.error(error);
       });
-  }
+  };
 
   return (
     <>
@@ -86,8 +85,8 @@ export default function SignUp() {
                 keyboard="default"
                 returnKeyType={'next'}
                 secureText={false}
-              // inputRef={instance => (firstnameRef = instance)}
-              // onSubmitEditing={() => lastnameRef.focus()}
+                // inputRef={instance => (firstnameRef = instance)}
+                // onSubmitEditing={() => lastnameRef.focus()}
               />
               <CustomTextfield
                 title="Last Name"
@@ -97,8 +96,8 @@ export default function SignUp() {
                 keyboard="default"
                 returnKeyType={'next'}
                 secureText={false}
-              // inputRef={instance => (lastnameRef = instance)}
-              // onSubmitEditing={() => lastnameRef.focus()}
+                // inputRef={instance => (lastnameRef = instance)}
+                // onSubmitEditing={() => lastnameRef.focus()}
               />
               <CustomTextfield
                 title="Work Email"
@@ -108,8 +107,8 @@ export default function SignUp() {
                 keyboard="default"
                 returnKeyType={'next'}
                 secureText={false}
-              // inputRef={instance => (emailRef = instance)}
-              // onSubmitEditing={() => emailRef.focus()}
+                // inputRef={instance => (emailRef = instance)}
+                // onSubmitEditing={() => emailRef.focus()}
               />
               <CustomTextfield
                 title="Password"
@@ -118,7 +117,7 @@ export default function SignUp() {
                 textValue={password}
                 keyboard="default"
                 returnKeyType={'next'}
-                secureText={false}
+                secureText={true}
               />
 
               <View>

@@ -8,7 +8,7 @@ import {
   Text,
   FlatList,
 } from 'react-native';
-
+import { ScrollableTabView } from '@summerkiflain/react-native-scrollable-tabview'
 import {SearchBar} from 'react-native-elements';
 import {
   WIDTH,
@@ -17,7 +17,7 @@ import {
   TAB_FOOTER_IMAGE_CONSTANT,
 } from '../../utils/Constant';
 import FastImage from 'react-native-fast-image';
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+
 
 const allData = [
   {
@@ -143,19 +143,26 @@ export default ChatList = ({navigation}) => {
 
   return (
     <SafeAreaView style={style.safeAreaContainer}>
+   
       <ScrollableTabView
-        tabBarTextStyle={style.tabBarTextStyle}
-        tabBarInactiveTextColor={'black'}
-        tabBarActiveTextColor={'#DD0000'}
-        tabBarUnderlineStyle={style.underlineStyle}
-        initialPage={0}>
-        <View key={1} tabLabel={'Message'} style={{flex: 1}}>
+                tabBarTextStyle={style.tabBarTextStyle}
+                tabBarInactiveTextColor={'black'}
+                tabBarActiveTextColor={'#DD0000'}
+                tabBarUnderlineStyle={style.underlineStyle}
+                initialPage={0}
+
+                ref={(tabView) => { tabView = tabView; }}
+            >
+
+        <View key={1} tabLabel={'Message'} style={{ }}>
           <View>{_renderListView()}</View>
         </View>
-        <View key={1} tabLabel={'Referrals'}>
+
+        <View key={2} tabLabel={'Referrals'} style={{ }}>
           <View>{_renderListView()}</View>
         </View>
-      </ScrollableTabView>
+        
+      </ScrollableTabView> 
     </SafeAreaView>
   );
 };
@@ -166,7 +173,7 @@ const style = StyleSheet.create({
     backgroundColor: '#fafafa',
   },
   tabBarTextStyle: {
-    // fontSize: WIDTH * 0.04,
+     fontSize: WIDTH * 0.04,
     fontWeight: 'bold',
   },
   underlineStyle: {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -16,7 +16,7 @@ import {
   LayoutAnimation,
   UIManager,
 } from 'react-native';
-import { PROFILE_IMAGE_CONSTANT, NEW_PROFILE_IMG } from '../../utils/Constant';
+import {PROFILE_IMAGE_CONSTANT, NEW_PROFILE_IMG} from '../../utils/Constant';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -45,7 +45,7 @@ const renderViewMoreDescription = onPress => {
 const renderViewLessDescription = onPress => {
   return (
     <TouchableHighlight
-      style={[styles.angelButton, { backgroundColor: '#DD0000' }]}
+      style={[styles.angelButton, {backgroundColor: '#DD0000'}]}
       onPress={onPress}
       underlayColor="#f1f1f1">
       <Image
@@ -64,18 +64,18 @@ const onClickMyNote = () => {
   alert('on click my notes');
 };
 
-const renderNoteView = ({ expanded }) => {
+const renderNoteView = ({expanded}) => {
   return (
     <View
       style={[
         styles.textInputParentView,
-        { height: expanded ? null : 0, margin: 20 },
+        {height: expanded ? null : 0, margin: 20},
       ]}>
       <TextInput
         placeholder={''}
         autoCapitalize="sentences"
         multiline={true}
-        onChangeText={val => ({ note: val })}
+        onChangeText={val => ({note: val})}
         // value={note}
         onContentSizeChange={event => ({
           height: event.nativeEvent.contentSize.height,
@@ -92,7 +92,7 @@ const renderNoteView = ({ expanded }) => {
       />
 
       <TouchableHighlight
-        style={[styles.angelButton, { backgroundColor: '#DD0000' }]}
+        style={[styles.angelButton, {backgroundColor: '#DD0000'}]}
         onPress={addNote()}
         underlayColor="#f1f1f1">
         <Image
@@ -123,7 +123,7 @@ const logoutUser = async => {
       onPress: () => console.log('Cancel Pressed'),
       style: 'cancel',
     },
-    { text: 'OK', onPress: () => console.log('OK Pressed') },
+    {text: 'OK', onPress: () => console.log('OK Pressed')},
   ]);
 };
 
@@ -172,12 +172,12 @@ export default function Profile(props) {
         headerView={
           <TouchableOpacity
             onPress={() => setModalVisible(true)}
-            style={{ width: '100%', height: '100%' }}>
+            style={{width: '100%', height: '100%'}}>
             <Text style={styles.headerTextViewSubtitle}> </Text>
           </TouchableOpacity>
         }>
         <ScrollView
-          style={[styles.scrollViewStyle, { marginTop: -20 }]}
+          style={[styles.scrollViewStyle, {marginTop: -20}]}
           keyboardDismissMode="interactive">
           <View style={styles.signInContainer}>
             <View style={styles.subViewContainer}>
@@ -194,12 +194,11 @@ export default function Profile(props) {
                   {/* {profile.company}*/}
                   company
                 </Text>
-
               </View>
             </View>
 
-            <View style={[styles.signInContainer, { marginTop: 0 }]}>
-              <View style={[styles.sectionView, { marginTop: 0 }]}>
+            <View style={[styles.signInContainer, {marginTop: 0}]}>
+              <View style={[styles.sectionView, {marginTop: 0}]}>
                 {/*  <View
                   style={[
                     styles.sectionView,
@@ -211,18 +210,18 @@ export default function Profile(props) {
                   <View style={[styles.subViewContainer, {marginTop: 15}]}>*/}
                 <SectionView
                   text={'Contact Info'}
-                  viewStyle={{ marginTop: 20, backgroundColor: '#EFEFF5' }}
-                  textStyle={{ marginLeft: 25 }}
+                  viewStyle={{marginTop: 20, backgroundColor: '#EFEFF5'}}
+                  textStyle={{marginLeft: 25}}
                 />
 
                 <View>
                   <View>
                     <TouchableOpacity onPress={() => onSelectProfileData()}>
-                      <View style={{ marginBottom: 15 }}>
+                      <View style={{marginBottom: 15}}>
                         <LinkView
                           img={NEW_PROFILE_IMG.PHONE}
                           text={'Call'}
-                          textStyle={{ color: 'black' }}
+                          textStyle={{color: 'black'}}
                           containerStyle={styles.linkViewContainer}
                         />
                       </View>
@@ -243,7 +242,7 @@ export default function Profile(props) {
                 </TouchableOpacity> */}
                 <View>
                   <TouchableOpacity onPress={() => onSelectProfileData()}>
-                    <View style={{ marginBottom: 10 }}>
+                    <View style={{marginBottom: 10}}>
                       <LinkView
                         img={NEW_PROFILE_IMG.ENVELOPE}
                         text={'Email'}
@@ -267,7 +266,7 @@ export default function Profile(props) {
                   <LinkView
                     img={NEW_PROFILE_IMG.MAP_MARKER_LIGHT}
                     text={'Address'}
-                    textStyle={{ color: 'black' }}
+                    textStyle={{color: 'black'}}
                     containerStyle={[
                       styles.linkViewContainer,
                       // {marginBottom: 10},
@@ -284,17 +283,19 @@ export default function Profile(props) {
                     img={PROFILE_IMAGE_CONSTANT.STICKY_NOTE}
                     text={'My Note'}
                     isShowLine={false}
-                    textStyle={{ color: 'black' }}
-                    containerStyle={[
-                      styles.linkViewContainer,
-                      { marginTop: 20 },
-                    ]}
+                    textStyle={{color: 'black'}}
+                    containerStyle={[styles.linkViewContainer, {marginTop: 20}]}
                   />
                 </TouchableOpacity>
                 <SectionView
                   text={'Resources'}
-                  viewStyle={{ marginTop: 0, backgroundColor: '#EFEFF5', borderBottomWidth: 1, borderColor: "#b4b4b4" }}
-                  textStyle={{ marginLeft: 25 }}
+                  viewStyle={{
+                    marginTop: 0,
+                    backgroundColor: '#EFEFF5',
+                    borderBottomWidth: 1,
+                    borderColor: '#b4b4b4',
+                  }}
+                  textStyle={{marginLeft: 25}}
                 />
               </View>
               {/* <View>
@@ -313,7 +314,6 @@ export default function Profile(props) {
                 </TouchableOpacity>
               </View> */}
               <View>
-
                 {/* 
                 <SectionView
                   // text={`MEET OTHER PEOPLE LIKE ${profile.first_name.toUpperCase()}`}
@@ -331,45 +331,50 @@ export default function Profile(props) {
                 /> */}
                 <SectionView
                   text={'Settings'}
-                  viewStyle={{ marginTop: 0, backgroundColor: '#EFEFF5' }}
-                  textStyle={{ marginLeft: 25 }}
+                  viewStyle={{marginTop: 0, backgroundColor: '#EFEFF5'}}
+                  textStyle={{marginLeft: 25}}
                 />
-                <View style={{ marginTop: 0 }}>
-
+                <View style={{marginTop: 0}}>
                   <TouchableOpacity onPress={() => navigateToEditProfile()}>
                     <LinkView
                       img={NEW_PROFILE_IMG.PENCIL}
                       text={'Edit Profile'}
-                      textStyle={{ color: 'black' }}
-                      containerStyle={[styles.linkViewContainer, { marginBottom: 15 }]}
+                      textStyle={{color: 'black'}}
+                      containerStyle={[
+                        styles.linkViewContainer,
+                        {marginBottom: 15},
+                      ]}
                     />
                   </TouchableOpacity>
-
                 </View>
-                <View style={{ marginTop: 0 }}>
-
-                  <TouchableOpacity onPress={() => Linking.openURL('app-settings:')}>
+                <View style={{marginTop: 0}}>
+                  <TouchableOpacity
+                    onPress={() => Linking.openURL('app-settings:')}>
                     <LinkView
                       img={NEW_PROFILE_IMG.BELL}
                       text={'Notification Settings'}
-                      textStyle={{ color: 'black' }}
-                      containerStyle={[styles.linkViewContainer, { marginBottom: 15 }]}
+                      textStyle={{color: 'black'}}
+                      containerStyle={[
+                        styles.linkViewContainer,
+                        {marginBottom: 15},
+                      ]}
                     />
                   </TouchableOpacity>
                 </View>
-                <View style={{ marginTop: 0 }}>
-                       <TouchableOpacity onPress={() => logoutUser()}>
-                      <LinkView
-                        img={NEW_PROFILE_IMG.DOOR_OPEN}
-                        text={'Sign Out'}
-
-                        textStyle={{ color: 'black' }}
-                        containerStyle={[styles.linkViewContainer, { marginBottom: 15 }]}
-                      />
-                    </TouchableOpacity>
-              
+                <View style={{marginTop: 0}}>
+                  <TouchableOpacity onPress={() => logoutUser()}>
+                    <LinkView
+                      img={NEW_PROFILE_IMG.DOOR_OPEN}
+                      text={'Sign Out'}
+                      textStyle={{color: 'black'}}
+                      containerStyle={[
+                        styles.linkViewContainer,
+                        {marginBottom: 15},
+                      ]}
+                    />
+                  </TouchableOpacity>
                 </View>
-                <View style={{ marginTop: 10 }}></View>
+                <View style={{marginTop: 10}}></View>
               </View>
             </View>
           </View>
@@ -404,7 +409,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: 'white',
     borderRadius: 15,
-    shadowOffset: { height: 0, width: 0 },
+    shadowOffset: {height: 0, width: 0},
     shadowColor: 'gray',
     shadowOpacity: 0.5,
     alignContent: 'center',
@@ -420,7 +425,7 @@ const styles = StyleSheet.create({
 
   subViewContainer: {
     marginLeft: 10,
-    marginRight: 10
+    marginRight: 10,
   },
   linkViewContainer: {
     marginLeft: wp('4%'),

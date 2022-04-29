@@ -1,5 +1,5 @@
 import React, {useState, useCallback, useEffect} from 'react';
-import {GiftedChat, Bubble} from 'react-native-gifted-chat';
+import {GiftedChat, Bubble, Send} from 'react-native-gifted-chat';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -35,12 +35,19 @@ export default function ChatView() {
       GiftedChat.append(previousMessages, messages),
     );
   }, []);
-  const renderSend = () => {
+  const renderSend = props => {
     return (
-      <TouchableOpacity style={{marginRight: 5, marginBottom: 5}}>
-        <Icon name="arrow-circle-up" size={30} />
-      </TouchableOpacity>
+      <Send {...props}>
+        <View style={{marginRight: 10, marginBottom: 5}}>
+          <Icon name="arrow-circle-up" size={30} />
+        </View>
+      </Send>
     );
+    // return (
+    //   <TouchableOpacity style={{marginRight: 5, marginBottom: 5}}>
+    //     <Icon name="arrow-circle-up" size={30} />
+    //   </TouchableOpacity>
+    // );
   };
   const renderFooter = () => {
     return <TypingIndicator isTyping={true} />;
@@ -75,6 +82,7 @@ export default function ChatView() {
       <View
         style={{
           borderBottomWidth: 1,
+          borderColor: '#b4b4b4',
           padding: 10,
           flexDirection: 'row',
           alignItems: 'center',
@@ -117,7 +125,8 @@ export default function ChatView() {
         inverted
         isKeyboardInternallyHandled={true}
         alwaysShowSend={true}
-        // renderSend={renderSend}
+        // onSend={renderSend}
+        renderSend={renderSend}
         renderChatFooter={renderFooter}
       />
     </SafeAreaView>
