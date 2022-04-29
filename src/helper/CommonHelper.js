@@ -2,6 +2,7 @@ import {Linking, Alert, Animated, useState} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import moments from 'moment-timezone';
 import moment from 'moment';
+import {EventRegister} from 'react-native-event-listeners';
 import {EVENT_CATEGORY_CONSTANT} from '../../../talloo/src/utils/Constant';
 
 export const PLACE_API_KEY = 'AIzaSyD9PhX_x-6NqPQKgqLrRkT906VllHkQjnk'; //"AIzaSyAoSw_L8e7DEzMRE8Bz-7JecFc77X0SpLs";
@@ -143,7 +144,7 @@ export function isTwoWeeksOrMore(momentDate) {
   return !isWithinAWeek(momentDate);
 }
 
-export const onScroll = (event, duration = 200) => {
+export const onScroll = (event, duration = 200, offset) => {
   const currentOffset = event.nativeEvent.contentOffset.y + 65;
   const dif = currentOffset - (offset || 0);
   const offSet = new Animated.Value(0);

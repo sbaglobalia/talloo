@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import SignupHeader from '../../components/SingupHeader';
-import {CustomTextfield} from '../../components/CustomTextfield';
+import CustomTextfield from '../../components/CustomTextfield';
 import CustomButton from '../../components/CustomButton';
 import React, {useState} from 'react';
 import {

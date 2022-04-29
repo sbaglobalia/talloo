@@ -1,5 +1,5 @@
 // Dependancies
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import {StyleSheet, Text, View, TextInput} from 'react-native';
 import React from 'react';
 import {
   widthPercentageToDP as wp,
@@ -12,7 +12,7 @@ export default function CustomTextfield(props) {
       <Text
         style={[
           styles.subTitleText,
-          { color: props.isInvalid ? '#DD0000' : 'black' },
+          {color: props.isInvalid ? '#DD0000' : 'black'},
         ]}>
         {props.title}
       </Text>

@@ -32,6 +32,34 @@ export const IMAGE_CONSTANT = {
   GOOGLE: require('../../../talloo/assets/ic_google.png'),
 };
 
+export const PROFILE_IMAGE_CONSTANT = {
+  ANGEL_DOWN: require('../../assets/Profile/angle-down-light.png'),
+  ANGEL_UP: require('../../assets/Profile/angle-up-light.png'),
+  ANGEL_UP_WHITE: require('../../assets/Profile/angel-up_light_white.png'),
+  MESSAGE: require('../../assets/Profile/comments-solid.png'),
+  MAIL: require('../../assets/Profile/envelope-solid.png'),
+  WEB: require('../../assets/Profile/globe-solid.png'),
+  FACEBOOK_OFFICIAL: require('../../assets/Profile/facebook-brands.png'),
+  LINKEDIN_OFFICIAL: require('../../assets/Profile/linkedin-brands.png'),
+  TWITTER_OFFICIAL: require('../../assets/Profile/twitter-brands.png'),
+  MAP_MARKER: require('../../assets/Profile/map-marker-solid.png'),
+  PHONE_DIALLER: require('../../assets/Profile/phone-alt-solid.png'),
+  STICKY_NOTE: require('../../assets/Profile/sticky-note-solid.png'),
+  DEFAULT_PROFILE: require('../../assets/Profile/ic_user.png'),
+  SAVE_PROFILE: require('../../assets/FooterTab/ic_sel_profile.png'),
+  UNSAVE_PROFILE: require('../../assets/FooterTab/ic_unsel_profile.png'),
+  LOGOUT: require('../../assets/Profile/ic_logout.png'),
+  MESSAGE_DISABLE: require('../../assets/Profile/ic_chat_gray.png'),
+  MAIL_DISABLE: require('../../assets/Profile/envelope-solid_gray.png'),
+  WEB_DISABLE: require('../../assets/Profile/globe-solid_gray.png'),
+  FACEBOOK_OFFICIAL_DISABLE: require('../../assets/Profile/facebook-brands_gray.png'),
+  LINKEDIN_OFFICIAL_DISABLE: require('../../assets/Profile/linkedin-brands_gray.png'),
+  TWITTER_OFFICIAL_DISABLE: require('../../assets/Profile/twitter-brands_gray.png'),
+  MAP_MARKER_DISABLE: require('../../assets/Profile/map-marker-solid_gray.png'),
+  PHONE_DIALLER_DISABLE: require('../../assets/Profile/phone-alt-solid_gray.png'),
+  STICKY_NOTE_DISABLE: require('../../assets/Profile/sticky-note-solid_gray.png'),
+  SHAREPROFILE: require('../../assets/Profile/ic_user.png'),
+};
 export const EVENT_CATEGORY_CONSTANT = {
   TALLOO: require('../../../talloo/assets/ic_launcher.png'),
   ADVENTURE: require('../../../talloo/assets/EventCategory/adventure.png'),
@@ -54,7 +82,17 @@ export const EVENT_CATEGORY_CONSTANT = {
   OPEN_CIRCLE: require('../../../talloo/assets/EventCategory/open_circle.png'),
   MEDICAL: require('../../../talloo/assets/EventCategory/medical.png'),
 };
-
+export const EVENT_IMAGE_CONSTANT = {
+  EVENT_CALENDER: require('../../assets/Event/ic_event_datetime.png'),
+  EVENT_GROUP: require('../../assets/Event/ic_event_group.png'),
+  EVENT_LOCATION: require('../../assets/Event/ic_event_location.png'),
+  EVENT_EDIT: require('../../assets/Event/ic_edit.png'),
+  EVENT_DELETE: require('../../assets/Event/ic_delete.png'),
+  EVENT_DUPLICATE: require('../../assets/Event/ic_copy.png'),
+  EVENT_ANGEL_RIGHT: require('../../assets/Event/ic_angel_right.png'),
+  EVENT_GROUP_DISABLE: require('../../assets/Event/ic_event_group_gray.png'),
+  EVENT_LOCATION_DISABLE: require('../../assets/Event/ic_event_location_gray.png'),
+};
 export const TAB_FOOTER_IMAGE_CONSTANT = {
   EVENT_HOME: require('../../../talloo/assets/FooterTab/FloatFooter/ic_home.png'),
   EVENT_HOME_SELECTED: require('../../../talloo/assets/FooterTab/FloatFooter/ic_sel_home.png'),
@@ -165,9 +203,6 @@ export const FIREBASE_DB_CONSTANT = {
 };
 
 export const eventCategorylist = [
-  // { "label": "Open Circle", "value": "OpenCircle" },
-  // { "label": "Morning Social", "value": "MorningSocial" },
-  // { "label": "Evening Social", "value": "EveningSocial" },
   {label: 'General Business', value: 'GeneralBusiness'},
   {label: 'Construction', value: 'Construction'},
   {label: 'Manufacturing', value: 'Manufacturing'},
@@ -177,9 +212,6 @@ export const eventCategorylist = [
 ];
 
 export const adminAudiencelist = [
-  // { "label": "Members", "value": "Members" },
-  // { "label": "Main Street", "value": "Main Street" },
-  // { "label": "Mid-Market", "value": "Mid-Market" },
   {label: 'Public', value: 'Public'},
   {label: 'Talloo Members + Guests', value: 'Talloo Members + Guests'},
   {
@@ -203,9 +235,6 @@ export const days = [
 ];
 
 export const audiencelist = [
-  // { "label": "Members", "value": "Members" },
-  // { "label": "Main Street", "value": "Main Street" },
-  // { "label": "Mid-Market", "value": "Mid-Market" },
   {label: 'Public', value: 'Public'},
   {label: 'Talloo Members + Guests', value: 'Talloo Members + Guests'},
   {
@@ -220,9 +249,6 @@ export const audiencelist = [
 
 export const tallooEventCategorylist = [
   {label: 'Talloo', value: 'Talloo'},
-  // { "label": "Open Circle", "value": "OpenCircle" },
-  // { "label": "Morning Social", "value": "MorningSocial" },
-  // { "label": "Evening Social", "value": "EveningSocial" },
   {label: 'General Business', value: 'GeneralBusiness'},
   {label: 'Construction', value: 'Construction'},
   {label: 'Manufacturing', value: 'Manufacturing'},

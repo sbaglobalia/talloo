@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   StyleSheet,
   Text,
@@ -17,8 +17,12 @@ import {
 } from 'react-native-responsive-screen';
 import Ionicons from 'react-native-vector-icons/Fontisto';
 import { useNavigation } from "@react-navigation/native";
+import { GoogleSignin, statusCodes, } from "@react-native-google-signin/google-signin";
+import { appleAuth } from "@invertase/react-native-apple-authentication";
+import auth from "@react-native-firebase/auth";
+
 import SingupHeader from '../../../../talloo/src/components/SingupHeader';
-import {IMAGE_CONSTANT} from '../../utils/Constant';
+import { IMAGE_CONSTANT } from '../../utils/Constant';
 
 const majorVersionIOS = parseInt(Platform.Version, 10);
 
@@ -26,12 +30,35 @@ const SignIn = () => {
 
   const navigation = useNavigation();
 
-  const _singInWithGoogle = () => {
-    Alert.alert('SignIn Screen onPress Called Google');
+  useEffect(() => {
+    GoogleSignin.configure({
+      forceConsentPrompt: true,
+      webClientId: "652298048160-viie9g1b63ta9lpt1l6teedq0qvrqj8v.apps.googleusercontent.com",
+    });
+  })
+
+  const _singInWithGoogle = async () => {
+    await GoogleSignin.hasPlayServices({
+      //Check if device has Google Play Services installed.
+      //Always resolves to true on iOS.
+      showPlayServicesUpdateDialog: true,
+    });
+    //await GoogleSignin.configure();
+    const data = await GoogleSignin.signIn();
+    console.log("ddd=====>",data);
+    // let email = data.user.email;
   };
 
-  const _singInWithApple = () => {
-    Alert.alert('SignIn Screen onPress Called Apple');
+
+  const _singInWithApple = async () => {
+    const appleAuthRequestResponse = await appleAuth.performRequest({
+      requestedOperation: appleAuth.Operation.LOGIN,
+      requestedScopes: [appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
+    });
+    let resp = JSON.stringify(appleAuthRequestResponse);
+    let userResponse = JSON.parse(resp)
+    console.log("apple dataa===>>>",userResponse);
+
   };
 
   return (
@@ -107,7 +134,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  googleImage: {height: '93%', width: '6%'},
+  googleImage: { height: '93%', width: '6%' },
   appleButtonView: {
     backgroundColor: 'black',
     height: hp('6%'),

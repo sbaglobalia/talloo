@@ -18,6 +18,8 @@ target 'talloo' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'tallooTests' do
     inherit! :complete
     # Pods for testing

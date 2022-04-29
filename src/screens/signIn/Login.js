@@ -1,4 +1,3 @@
-// Dependencies
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,7 +17,7 @@ import {
 
 import SingupHeader from '../../components/SingupHeader';
 
-import {CustomTextfield} from '../../components/CustomTextfield';
+import CustomTextfield from '../../components/CustomTextfield';
 
 export default function Login({navigation}) {
   const [error, setError] = useState('');
@@ -36,16 +35,16 @@ export default function Login({navigation}) {
   };
 
   const handleLogin = () => {
-    if (
-      userInfo.email === 'email@gmail.com' &&
-      userInfo.password === 'password'
-    )
-      navigation.navigate('Home');
-    else alert('Invalid User');
+    // if (
+    //   userInfo.email === 'email@gmail.com' &&
+    //   userInfo.password === 'password'
+    // )
+    navigation.navigate('Profile');
+    // else alert('Invalid User');
   };
   return (
     <>
-      {error ? alert(error) : null}
+      {/* {error ? alert(error) : null} */}
 
       <SafeAreaView style={styles.container}>
         <KeyboardAvoidingView
@@ -63,7 +62,7 @@ export default function Login({navigation}) {
               <View style={styles.signInContainer}>
                 <TouchableOpacity
                   style={[styles.buttonView, styles.buttonView1]}
-                  onPress={() => navigation.navigate('CreateProfile')}>
+                  onPress={() => navigation.navigate('SignUp')}>
                   <Text style={[styles.buttonText, styles.subButtonText]}>
                     SIGN UP
                   </Text>
@@ -94,7 +93,7 @@ export default function Login({navigation}) {
 
                 <TouchableOpacity
                   style={[styles.buttonView, styles.loginTouchable]}
-                  onPress={handleLogin}>
+                  onPress={"handleLogin"}>
                   <Text style={[styles.buttonText, styles.LoginText]}>
                     LOGIN
                   </Text>
