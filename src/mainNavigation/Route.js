@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useSelector, useDispatch } from "react-redux";
+
 import SignIn from '../screens/signIn/SignIn';
 import SignUp from '../screens/signIn/SignUp';
 import Login from '../screens/signIn/Login';
@@ -21,20 +23,14 @@ import ChatInput from '../screens/message/ChatInput';
 const Stack = createNativeStackNavigator();
 
 const Route = () => {
-  const [auth, setAuth] = useState(false);
+
+  const userInfo = useSelector((state) => state.userInfo);
+  console.log("userInfo==>", userInfo);
 
   return (
     <NavigationContainer>
-      {auth == true ? (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="Splash Screen" component={SplashScreen} />
-          <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="SignUp" component={SignUp} />
-          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        </Stack.Navigator>
-      ) : (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+      {userInfo.auth ? (
+        <Stack.Navigator initialRouteName="BottomTab" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="BottomTab" component={BottomTab} />
           <Stack.Screen name="CreateProfile" component={CreateProfile} />
           <Stack.Screen name="Contact" component={Contact} />
@@ -46,6 +42,14 @@ const Route = () => {
           <Stack.Screen name="Message" component={Message} />
           <Stack.Screen name="ChatView" component={ChatView} />
           <Stack.Screen name="ChatInput" component={ChatInput} />
+        </Stack.Navigator>
+      ) : (
+        <Stack.Navigator  screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="SplashScreen" component={SplashScreen} />
+          <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         </Stack.Navigator>
       )}
     </NavigationContainer>

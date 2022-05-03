@@ -45,7 +45,7 @@ const SignIn = () => {
     });
     //await GoogleSignin.configure();
     const data = await GoogleSignin.signIn();
-    console.log("ddd=====>",data);
+    console.log("ddd=====>", data);
     // let email = data.user.email;
   };
 
@@ -57,7 +57,7 @@ const SignIn = () => {
     });
     let resp = JSON.stringify(appleAuthRequestResponse);
     let userResponse = JSON.parse(resp)
-    console.log("apple dataa===>>>",userResponse);
+    console.log("apple dataa===>>>", userResponse);
 
   };
 

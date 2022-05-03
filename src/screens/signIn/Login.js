@@ -9,28 +9,30 @@ import {
   Text,
   Alert,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import { useSelector, useDispatch } from "react-redux";
 
+//////
 import SingupHeader from '../../components/SingupHeader';
-
 import CustomTextfield from '../../components/CustomTextfield';
 
-export default function Login({navigation}) {
-  const [error, setError] = useState('');
+export default function Login({ navigation }) {
 
+  const dispatch = useDispatch();
+
+  const [error, setError] = useState('');
   const [userInfo, setUserInfo] = useState({
     email: '',
     password: '',
   });
 
-  const {email, password} = userInfo;
-
+  const { email, password } = userInfo;
   const onChangeText = (value, fieldName) => {
-    setUserInfo({...userInfo, [fieldName]: value});
+    setUserInfo({ ...userInfo, [fieldName]: value });
     console.log(userInfo);
   };
 
@@ -39,7 +41,10 @@ export default function Login({navigation}) {
     //   userInfo.email === 'email@gmail.com' &&
     //   userInfo.password === 'password'
     // )
-    navigation.navigate('Profile');
+    dispatch({
+      type: "SET_AUTH",
+      payload: true,
+    });
     // else alert('Invalid User');
   };
   return (
@@ -93,7 +98,7 @@ export default function Login({navigation}) {
 
                 <TouchableOpacity
                   style={[styles.buttonView, styles.loginTouchable]}
-                  onPress={"handleLogin"}>
+                  onPress={handleLogin}>
                   <Text style={[styles.buttonText, styles.LoginText]}>
                     LOGIN
                   </Text>
@@ -118,7 +123,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  subContainer: {flex: 1, flexDirection: 'column', justifyContent: 'center'},
+  subContainer: { flex: 1, flexDirection: 'column', justifyContent: 'center' },
   buttonView: {
     width: wp('80%'),
     borderWidth: 2,
@@ -130,8 +135,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
   },
-  loginTouchable: {backgroundColor: '#DD0000', marginTop: 30},
-  buttonView1: {backgroundColor: '#DD0000'},
+  loginTouchable: { backgroundColor: '#DD0000', marginTop: 30 },
+  buttonView1: { backgroundColor: '#DD0000' },
 
   signInContainer: {
     marginLeft: wp('4%'),
@@ -144,18 +149,18 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textAlign: 'center',
   },
-  LoginText: {color: 'white'},
+  LoginText: { color: 'white' },
   forgotView: {
     alignSelf: 'center',
     marginTop: 20,
     marginBottom: 10,
   },
-  subButtonText: {color: 'white'},
+  subButtonText: { color: 'white' },
   subTitleText: {
     fontSize: 18,
     color: 'black',
     fontWeight: '600',
     marginTop: 5,
   },
-  orText: {alignSelf: 'center', marginTop: 15, fontSize: 20},
+  orText: { alignSelf: 'center', marginTop: 15, fontSize: 20 },
 });
